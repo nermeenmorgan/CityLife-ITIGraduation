@@ -19,13 +19,39 @@ export default function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link" to="about">About</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="services">Services</Link>
+                        <li class="nav-item dropdown">
+                            <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </Link>
+                            <ul class="dropdown-menu">
+                                <li><Link className="dropdown-item" to="#">Stores</Link></li>
+                                <li><Link className="dropdown-item" to="#">Markets</Link></li>
+                                <li><Link className="dropdown-item" to="#">Hospital</Link></li>
+                                <li><Link className="dropdown-item" to="#">Education</Link></li>
+                                <li><Link className="dropdown-item" to="#">Cinema</Link></li>
+                                <li><Link className="dropdown-item" to="#">Maintenance payment</Link></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </Link>
+                            <ul class="dropdown-menu">
+                                <li><Link className="dropdown-item" to="resturants">Resturants</Link></li>
+                                <li><Link className="dropdown-item" to="#">Shopping</Link></li>
+                                <li><Link className="dropdown-item" to="#">Fashion</Link></li>
+                                <li><Link className="dropdown-item" to="#">Health</Link></li>
+                                <li><Link className="dropdown-item" to="#">Sports</Link></li>
+                                <li><Link className="dropdown-item" to="#">Maintenance</Link></li>
+                                <li><Link className="dropdown-item" to="#">Home Services</Link></li>
+                                <li><Link className="dropdown-item" to="#">Transportation</Link></li>
+                            </ul>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="contactus">Contact us</Link>
                         </li>
                     </ul>
+
                     <ul className="d-flex mt-3 ms-auto">
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
