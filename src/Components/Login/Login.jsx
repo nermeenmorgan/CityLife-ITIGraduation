@@ -49,12 +49,12 @@ export default function Login() {
                     <input className='form-control mb-3' type="password" name='password' id='password' value={formik.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
                     {formik.errors.password && formik.touched.password ? <div className="alert alert-danger">{formik.errors.password}</div> : null}
 
-                    {isLoading ? <button type='button' className='btn btn-success'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-success">Login</button>}
+                    {isLoading ? <button type='button' className='btn btn-success w-100'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-success w-100">Login</button>}
 
                     </form>
                 </div>
-                <div className='d-sm-block col-md-6'>
-                    <img src="/images/login.jpg" alt="" className='w-100 d-sm-block ' />
+                <div className='col-md-6'>
+                    <img src="/images/login.jpg" alt="" className='w-100' />
                 </div>
             </div>
         </div >

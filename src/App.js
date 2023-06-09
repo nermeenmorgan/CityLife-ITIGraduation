@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
@@ -7,9 +6,23 @@ import ContactUs from './Components/ContactUs/ContactUs';
 import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
-import './App.css';
 import Resturants from './Components/Resturants/Resturants';
 import Data from './Context/Data';
+import Markets from './Components/Markets/Markets';
+import Stores from './Components/Stores/Stores';
+import Hospitals from './Components/Hospitals/Hospitals';
+import MaintenancePayment from './Components/MaintenancePayment/MaintenancePayment';
+import Education from './Components/Education/Education';
+import Cinema from './Components/Cinema/Cinema';
+import Shopping from './Components/Shopping/Shopping';
+import Fashion from './Components/Fashion/Fashion';
+import Health from './Components/Health/Health';
+import Transportation from './Components/Transportation/Transportation';
+import Maintenance from './Components/Maintenance/Maintenance';
+import HomeServices from './Components/HomeServices/HomeServices';
+import Sports from './Components/Sports/Sports';
+import './App.css';
+
 
 function App() {
 
@@ -18,7 +31,20 @@ function App() {
       path: '', element: <Layout />, children: [
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
+        { path: "stores", element: <Stores /> },
+        { path: "markets", element: <Markets /> },
+        { path: "hospitals", element: <Hospitals /> },
+        { path: "education", element: <Education /> },
+        { path: "cinema", element: <Cinema /> },
+        { path: "payment", element: <MaintenancePayment /> },
         { path: "resturants", element: <Resturants /> },
+        { path: "shopping", element: <Shopping /> },
+        { path: "fashion", element: <Fashion /> },
+        { path: "health", element: <Health /> },
+        { path: "sports", element: <Sports /> },
+        { path: "maintenance", element: <Maintenance /> },
+        { path: "homeServices", element: <HomeServices /> },
+        { path: "transportation", element: <Transportation /> },
         { path: "contactus", element: <ContactUs /> },
         { path: "login", element: < Login /> },
         { path: "register", element: <Register /> },

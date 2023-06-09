@@ -34,7 +34,7 @@ export default function Register() {
         validationSchema
     })
 
-    return <>
+    return <> 
         <div className="container">
             <div className="row">
                 <div className='col-6 d-flex align-items-center '>
@@ -58,10 +58,10 @@ export default function Register() {
 
 
                         <label htmlFor='name'>Re Password</label>
-                        <input className='form-control mb-2' type="password" name='rePassword' id='rePassword' value={formik.rePassword} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                        <input className='form-control mb-3' type="password" name='rePassword' id='rePassword' value={formik.rePassword} onChange={formik.handleChange} onBlur={formik.handleBlur} />
                         {formik.errors.rePassword && formik.touched.rePassword ? <div className="alert alert-danger">{formik.errors.rePassword}</div> : null}
 
-                        {isLoading ? <button type='button' className='btn btn-success'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-success">Register</button>}
+                        {isLoading ? <button type='button' className='btn btn-success w-100'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-success w-100">Register</button>}
 
                     </form>
                 </div>

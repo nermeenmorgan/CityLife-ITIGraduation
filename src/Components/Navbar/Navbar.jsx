@@ -10,7 +10,7 @@ export default function Navbar() {
     return <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary ">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="#"><img src="images/logo-color.png" style={{ width: 75 }} alt="" /></Link>
+                <Link className="navbar-brand" to="#"><img src={process.env.PUBLIC_URL + '/images/logo-color.svg'} style={{width:65}} alt="Logo" /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -29,12 +29,12 @@ export default function Navbar() {
                                 Services
                             </Link>
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" to="#">Stores</Link></li>
-                                <li><Link className="dropdown-item" to="#">Markets</Link></li>
-                                <li><Link className="dropdown-item" to="#">Hospitals</Link></li>
-                                <li><Link className="dropdown-item" to="#">Education</Link></li>
-                                <li><Link className="dropdown-item" to="#">Cinema</Link></li>
-                                <li><Link className="dropdown-item" to="#">Maintenance payment</Link></li>
+                                <li><Link className="dropdown-item" to="stores">Stores</Link></li>
+                                <li><Link className="dropdown-item" to="markets">Markets</Link></li>
+                                <li><Link className="dropdown-item" to="hospitals">Hospitals</Link></li>
+                                <li><Link className="dropdown-item" to="education">Education</Link></li>
+                                <li><Link className="dropdown-item" to="cinema">Cinema</Link></li>
+                                <li><Link className="dropdown-item" to="payment">Maintenance payment</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -43,13 +43,13 @@ export default function Navbar() {
                             </Link>
                             <ul className="dropdown-menu">
                                 <li><Link className="dropdown-item" to="resturants">Resturants</Link></li>
-                                <li><Link className="dropdown-item" to="#">Shopping</Link></li>
-                                <li><Link className="dropdown-item" to="#">Fashion</Link></li>
-                                <li><Link className="dropdown-item" to="#">Health</Link></li>
-                                <li><Link className="dropdown-item" to="#">Sports</Link></li>
-                                <li><Link className="dropdown-item" to="#">Maintenance</Link></li>
-                                <li><Link className="dropdown-item" to="#">Home Services</Link></li>
-                                <li><Link className="dropdown-item" to="#">Transportation</Link></li>
+                                <li><Link className="dropdown-item" to="shopping">Shopping</Link></li>
+                                <li><Link className="dropdown-item" to="fashion">Fashion</Link></li>
+                                <li><Link className="dropdown-item" to="health">Health</Link></li>
+                                <li><Link className="dropdown-item" to="sports">Sports</Link></li>
+                                <li><Link className="dropdown-item" to="maintenance">Maintenance</Link></li>
+                                <li><Link className="dropdown-item" to="homeServices">Home Services</Link></li>
+                                <li><Link className="dropdown-item" to="transportation">Transportation</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
