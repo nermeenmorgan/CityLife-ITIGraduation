@@ -9,8 +9,10 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import './App.css';
 import Resturants from './Components/Resturants/Resturants';
+import Data from './Context/Data';
 
 function App() {
+
   let routers = createBrowserRouter([
     {
       path: '', element: <Layout />, children: [
@@ -26,7 +28,9 @@ function App() {
 
 
   return (<>
-    <RouterProvider router={routers}></RouterProvider>
+    <Data>
+      <RouterProvider router={routers}></RouterProvider>
+    </Data>
   </>);
 }
 
