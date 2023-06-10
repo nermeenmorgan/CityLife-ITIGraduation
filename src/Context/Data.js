@@ -3,8 +3,8 @@ import { useState } from 'react';
 import jwtDecode from 'jwt-decode';
 import axios from 'axios';
 
-export const DataContext = createContext();
 
+export const DataContext = createContext();
 export default function Data(props) {
     const ImgsArr = [
         "https://www.talaatmoustafa.com/Upload/75rehab%201.jpg",
@@ -38,15 +38,19 @@ export default function Data(props) {
        })
     },[])
     const [userData, setUserData] = useState(null);
-
     function saveUserData() {
         let encodedToken = localStorage.getItem("userToken");
         let decodedToken = jwtDecode(encodedToken);
         setUserData(decodedToken);
     }
 
+    function DeleteUserData() {
+        localStorage.removeItem("userToken")
+        window.location.reload();
+    }
+
     return (
-        <DataContext.Provider value={{ userData, saveUserData, ImgsArr, movies}}>
+        <DataContext.Provider value={{ userData, saveUserData }}>
             {props.children}
         </DataContext.Provider>
     );

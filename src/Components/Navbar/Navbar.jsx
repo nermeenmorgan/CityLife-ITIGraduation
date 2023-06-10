@@ -6,20 +6,20 @@ import { DataContext } from '../../Context/Data'
 export default function Navbar() {
 
     const { userData } = useContext(DataContext)
+    const { DeleteUserData } = useContext(DataContext)
 
     return <>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="#"><img src={process.env.PUBLIC_URL + '/images/logo-color.svg'} style={{width:65}} alt="Logo" /></Link>
+                <Link className="navbar-brand" to="#"><img src="images/logo.png" style={{ width: 60 }} alt="Logo" /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
 
-                    {/* {userData !== null ? */}
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                            <Link className="nav-link" aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="about">About</Link>
@@ -56,25 +56,28 @@ export default function Navbar() {
                             <Link className="nav-link" to="contactus">Contact us</Link>
                         </li>
                     </ul>
-                    {/* : null} */}
 
-                    {userData === null ? <ul className="d-flex mt-3 ms-auto">
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        </form>
-                        <button className="nav-item btn btn-success rounded-3 mx-2">
-                            <Link className="nav-link text-white" aria-current="page" to="login">Login</Link>
-                        </button>
-                        <button className="nav-item btn btn-success rounded-3 mx-2">
-                            <Link className="nav-link text-white" to="register">Register</Link>
-                        </button>
-                    </ul> : <ul className="d-flex mt-3 ms-auto">
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        </form>
-                        <button className="nav-item btn btn-success rounded-3 mx-2">
-                            <Link className="nav-link text-white" to="logout">Logout</Link>
-                        </button></ul>}
+                    {userData === null ?
+                        <ul className="d-flex mt-3 ms-auto">
+                            <form className="d-flex" role="search">
+                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            </form>
+                            <button className="nav-item btn btn-success rounded-3 mx-2 ">
+                                <Link className="nav-link text-white" aria-current="page" to="signin">Sign in</Link>
+                            </button>
+                            <button className="nav-item btn btn-success rounded-3 mx-2">
+                                <Link className="nav-link text-white" to="signup">Sign up</Link>
+                            </button>
+                        </ul>
+                        :
+                        <ul className="d-flex mt-3 ms-auto">
+                            <form className="d-flex" role="search">
+                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            </form>
+                            <button className="nav-item btn btn-success rounded-3 mx-2" onClick={() => { DeleteUserData(); }}>
+                                Sign out
+                            </button>
+                        </ul>}
 
                 </div>
             </div>
