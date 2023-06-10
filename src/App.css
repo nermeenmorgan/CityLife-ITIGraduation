@@ -42,18 +42,34 @@
 
 /* Colors */
 :root {
-  --mainColor: #09913C;
+  --mainColor: #09913c;
+  --lightGreenColor: rgb(9, 145, 60, 20%);
 }
-
 .mainColor {
   color: var(--mainColor);
+}
+.lightGreenColor {
+  color: var(--lightGreenColor);
+}
+
+/* Background Colors */
+.lightGreenBackgroudColor {
+  background-color: var(--lightGreenColor);
 }
 
 /* Buttons */
 .btn-mainColor {
   background-color: var(--mainColor);
+  color: #fff;
+}
+.btn-mainColor:hover {
+  color: var(--mainColor);
+  background-color: transparent;
+  border-color: var(--mainColor);
 }
 
-input[type='search']:focus {
-  border-color: var(--mainColor)
+/* Inputs */
+input[type="search"]:focus {
+  border-color: var(--mainColor);
+  box-shadow: none !important;
 }
