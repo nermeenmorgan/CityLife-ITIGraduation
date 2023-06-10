@@ -4,8 +4,7 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import ContactUs from './Components/ContactUs/ContactUs';
 import NotFound from './Components/NotFound/NotFound';
-import Login from './Components/Login/Login';
-import Register from './Components/Register/Register';
+import SignUp from './Components/SignUp/SignUp';
 import Resturants from './Components/Resturants/Resturants';
 import Data from './Context/Data';
 import Markets from './Components/Markets/Markets';
@@ -22,6 +21,7 @@ import Maintenance from './Components/Maintenance/Maintenance';
 import HomeServices from './Components/HomeServices/HomeServices';
 import Sports from './Components/Sports/Sports';
 import './App.css';
+import SignIn from './Components/SignIn/SignIn';
 
 
 function App() {
@@ -46,8 +46,8 @@ function App() {
         { path: "homeServices", element: <HomeServices /> },
         { path: "transportation", element: <Transportation /> },
         { path: "contactus", element: <ContactUs /> },
-        { path: "login", element: < Login /> },
-        { path: "register", element: <Register /> },
+        { path: "signin", element: < SignIn /> },
+        { path: "signup", element: <SignUp /> },
         { path: "*", element: <NotFound /> }]
     }
   ])
