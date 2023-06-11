@@ -46,11 +46,8 @@ export default function SignIn() {
     return <>
         <div className="container">
             <div className="row">
-
-                <div className='col-sm-12 col-md-6'>
-                    <img src="/images/login.jpg" alt="" className='w-100' />
-                </div>
-
+                <h1 className='text-center mainColor mt-4 fw-bold'>Sign in</h1>
+                <div className='d-flex flex-md-row flex-column-reverse'>
                 <div className='col-sm-12 col-md-6 d-flex align-items-center justify-content-center'>
                     <form onSubmit={formik.handleSubmit} className='d-flex flex-wrap'>
 
@@ -70,12 +67,16 @@ export default function SignIn() {
                             {formik.errors.password && formik.touched.password ? <span className=' opacity-100 text-danger ps-1'> {formik.errors.password}</span> : <span className=' opacity-0'> lorem </span>}
                         </div>
 
-                        {isLoading ? <button type='button' className='btn btn-success w-100'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-success w-100 ">Submit</button>}
+                        {isLoading ? <button type='button' className='btn bg-main w-100 mt-3'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn bg-main text-white w-100 mt-3">Submit</button>}
                     
                     </form>
+                </div>
+                <div className='col-sm-12 col-md-6'>
+                    <img src="/images/login.jpg" alt="" className='w-100' />
                 </div>
 
             </div>
         </div >
+    </div>
     </>
 }

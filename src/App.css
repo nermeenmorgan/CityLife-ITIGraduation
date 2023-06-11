@@ -48,10 +48,13 @@
   color: var(--mainColor);
 }
 
-/* Buttons */
-.btn-mainColor {
-  background-color: var(--mainColor);
+.bg-main {
+  background-color: var(--mainColor) !important;
 }
+.bg-main-light {
+  background-color: var(--lightGreenColor) !important;
+}
+
 
 /* Form inputs */
 .form-input {

@@ -69,9 +69,9 @@ const settings = {
     <>
       <div className="container mb-5 mt-3 pb-5">
         <div className="row">
-         <h1>About</h1>   
+         <h1 className="mainColor">About</h1>   
             <img  className="my-3 rounded-5" src="https://www.talaatmoustafa.com/Upload/43alrehab%201%20850%20x%20350%20px.jpg" alt="EL-Rehab phot"/>
-          <h2 className="my-3">A New Vision For Life In Egypt</h2>
+          <h2 className="my-3 mainColor">A New Vision For Life In Egypt</h2>
           <p className="my-3">
             The first fully-fledged community, creating a comprehensive
             integrated residential scheme within the New Cairo plan. AL-Rehab is
@@ -94,7 +94,7 @@ const settings = {
             Centers, An Internal and external Transportation Network, Banks and
             Money Exchange Services.
           </p>
-          <h2 className="my-3" >Al-Rehab Images Gallery:</h2>
+          <h2 className="my-3 mainColor" >Al-Rehab Images Gallery:</h2>
     <Slider {...settings}>
     {ImgsArr.map((img) => (
             <div key={uuid()} className="my-3 px-1">

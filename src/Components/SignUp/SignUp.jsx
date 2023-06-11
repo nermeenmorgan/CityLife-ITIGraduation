@@ -45,9 +45,9 @@ export default function SignUp() {
         <div className="container">
             <div className="row">
                 
-                <div className="col-sm-12 col-md-6">
-                    <img className="w-100" src="images/Register.jpg" alt="" />
-                </div>
+            <h1 className='text-center mainColor mt-4 fw-bold'>Sign up</h1>
+                <div className='d-flex flex-md-row flex-column-reverse'>
+              
 
                 <div className='col-sm-12 col-md-6 d-flex align-items-center '>
                     <form onSubmit={formik.handleSubmit} className='d-flex flex-wrap'>
@@ -87,11 +87,15 @@ export default function SignUp() {
                         </div>
 
 
-                        {isLoading ? <button type='button' className='btn btn-success w-100'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-success w-100 ">Submit</button>}
+                        {isLoading ? <button type='button' className='btn btn-success w-100 mt-3'><i className='fas fa-spinner fa-spin'></i></button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-success w-100 mt-3">Submit</button>}
                     </form>
+                </div>
+                <div className="col-sm-12 col-md-6">
+                    <img className="w-100" src="images/Register.jpg" alt="" />
                 </div>
 
             </div>
+        </div >
         </div >
     </>
 }

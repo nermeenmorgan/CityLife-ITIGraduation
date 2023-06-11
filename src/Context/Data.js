@@ -50,7 +50,7 @@ export default function Data(props) {
     }
 
     return (
-        <DataContext.Provider value={{ userData, saveUserData }}>
+        <DataContext.Provider value={{ userData, saveUserData,movies,DeleteUserData,ImgsArr}}>
             {props.children}
         </DataContext.Provider>
     );

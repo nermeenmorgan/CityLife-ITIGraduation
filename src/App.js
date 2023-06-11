@@ -5,10 +5,10 @@ import About from './Components/About/About';
 import ContactUs from './Components/ContactUs/ContactUs';
 import NotFound from './Components/NotFound/NotFound';
 import SignUp from './Components/SignUp/SignUp';
-import Resturants from './Components/Resturants/Resturants';
+import Restaurants from './Components/Restaurants/Restaurants';
 import Data from './Context/Data';
 import Markets from './Components/Markets/Markets';
-import Stores from './Components/Stores/Stores';
+import Banks from './Components/Banks/Banks';
 import Hospitals from './Components/Hospitals/Hospitals';
 import MaintenancePayment from './Components/MaintenancePayment/MaintenancePayment';
 import Education from './Components/Education/Education';
@@ -22,6 +22,7 @@ import HomeServices from './Components/HomeServices/HomeServices';
 import Sports from './Components/Sports/Sports';
 import './App.css';
 import SignIn from './Components/SignIn/SignIn';
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 
 
 function App() {
@@ -31,13 +32,13 @@ function App() {
       path: '', element: <Layout />, children: [
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
-        { path: "stores", element: <Stores /> },
+        { path: "banks", element: <Banks /> },
         { path: "markets", element: <Markets /> },
         { path: "hospitals", element: <Hospitals /> },
         { path: "education", element: <Education /> },
         { path: "cinema", element: <Cinema /> },
-        { path: "payment", element: <MaintenancePayment /> },
-        { path: "resturants", element: <Resturants /> },
+        { path: "payment", element: <ProtectedRoute><MaintenancePayment /></ProtectedRoute>},
+        { path: "restaurants", element: <Restaurants /> },
         { path: "shopping", element: <Shopping /> },
         { path: "fashion", element: <Fashion /> },
         { path: "health", element: <Health /> },

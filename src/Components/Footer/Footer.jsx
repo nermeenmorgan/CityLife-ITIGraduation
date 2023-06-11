@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="text-center text-lg-start bg-light text-muted">
-        <section className="pt-3">
+      <footer className="text-center text-lg-start bg-main-light text-muted mt-5">
+        <section className="pt-2">
           <div className="container text-center text-md-start mt-5">
             <div className="row mt-3">
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -61,7 +61,7 @@ export default function Footer() {
                   </li>
                   <li className="nav-item mb-2">
                     <Link to="payment" className="nav-link p-0 text-muted">
-                      Maintenance payment
+                      Payment
                     </Link>
                   </li>
                 </ul>
@@ -72,7 +72,7 @@ export default function Footer() {
                 <h6 className="text-uppercase fw-bold mb-2">Categories</h6>
                 <ul className="nav flex-column">
                   <li className="nav-item mb-2">
-                    <Link to="resturants" className="nav-link p-0 text-muted">
+                    <Link to="restaurants" className="nav-link p-0 text-muted">
                       Restaurants
                     </Link>
                   </li>
@@ -169,50 +169,3 @@ export default function Footer() {
   );
 }
 
-{
-  /* <footer className="py-5">
-<div className="row" bis_skin_checked="1">
-  <div className="col-6 col-md-2 mb-3" bis_skin_checked="1">
-    <h5>Section</h5>
-    <ul className="nav flex-column">
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-    </ul>
-  </div>
-
-  <div className="col-6 col-md-2 mb-3" bis_skin_checked="1">
-    <h5>Section</h5>
-    <ul className="nav flex-column">
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-    </ul>
-  </div>
-
-  <div className="col-6 col-md-2 mb-3" bis_skin_checked="1">
-    <h5>Section</h5>
-    <ul className="nav flex-column">
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-      <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-    </ul>
-  </div>
-</div>
-
-<div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top" bis_skin_checked="1">
-  <p>© 2022 Company, Inc. All rights reserved.</p>
-  <ul className="list-unstyled d-flex">
-    <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-    <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-    <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-  </ul>
-</div>
-</footer> */
-}
