@@ -38,17 +38,9 @@
   }
 }
 
-
-
-
-
-
-
-/* Css global variables */
-
 /* Colors */
 :root {
-  --mainColor: #09913c;
+  --mainColor: #09913C;
   --lightGreenColor: rgb(9, 145, 60, 20%);
 }
 .mainColor {
@@ -78,4 +70,27 @@
 input[type="search"]:focus {
   border-color: var(--mainColor);
   box-shadow: none !important;
+}
+.bg-main {
+  background-color: var(--mainColor) !important;
+}
+.bg-main-light {
+  background-color: var(--lightGreenColor) !important;
+}
+
+
+/* Form inputs */
+.form-input {
+  box-shadow: var(--mainColor);
+  background-color: var(--lightGreenColor);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 9px 18px -10px rgba(0, 0, 0, 0.75);
+  border: none;
+}
+
+.form-input:focus {
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  background-color: var(--lightGreenColor);
 }

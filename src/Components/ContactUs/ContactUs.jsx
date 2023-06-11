@@ -130,14 +130,15 @@ export default function ContactUs() {
         <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
+
+
+                    <div className="modal-body mx-auto fs-4">
                         Message Sent Successfully
                     </div>
-                    <div className="modal-footer">
-                        <button onClick={() => navigate('/')} type="button" className="btn btn-primary text-white" data-bs-dismiss="modal">Close</button>
+                    <i className="fa-solid fa-check  fs-1 mx-auto" style={{ color: "#2aa509" }}
+                    ></i>
+                    <div className="modal-footer border-0 w-100">
+                        <button onClick={() => navigate('/')} type="button" className="w-50 mx-auto  btn btn-primary text-white" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
