@@ -8,8 +8,8 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { Button, Modal, ProgressBar } from 'react-bootstrap';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import './AllRes.css';
-const Seafood = () => {
-    const {SeaFoodRes} = useContext(DataContext)
+const Shawarma = () => {
+  const {ShawarmaRes} = useContext(DataContext)
   const [showModal, setShowModal] = useState(false);
 
   const handleCall = (number) => {
@@ -25,11 +25,11 @@ const Seafood = () => {
   };
     return (
         <>
-            {/* <RestaurantsNavbar /> */}
-      <div className='fs-2 ms-5 fw-bold me-5 text-center'>Sea Food Restaurants</div>
+             {/* <RestaurantsNavbar /> */}
+      <div className='fs-2 ms-5 fw-bold me-5 text-center'>Shawarma Restaurants</div>
       <div className='d-flex flex-column justify-content-center m-5'>
-        {SeaFoodRes ? (
-          [...SeaFoodRes].map((res) => (
+        {ShawarmaRes ? (
+          [...ShawarmaRes].map((res) => (
             <div className='bg-light custom-style mb-5 p-3 p-md-5' key={res.id}>
               <div className='d-flex align-items-center flex-wrap'>
                 <img
@@ -111,4 +111,4 @@ const Seafood = () => {
     );
 }
 
-export default Seafood;
+export default Shawarma;

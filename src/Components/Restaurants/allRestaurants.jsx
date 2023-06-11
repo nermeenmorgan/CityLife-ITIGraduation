@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { DataContext } from '../../Context/Data';
-import RestaurantsNavbar from './RestaurantsNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -29,10 +27,11 @@ export default function Restaurants() {
     <>
       {/* <RestaurantsNavbar /> */}
       <div className='fs-2 ms-5 fw-bold me-5 text-center'>All Restaurants</div>
-      <div className='d-flex flex-column justify-content-center m-5'>
+      <div className='d-flex flex-column justify-content-center m-4'>
+
         {AllRestaurants ? (
           [...AllRestaurants].map((res) => (
-            <div className='bg-light custom-style mb-5 p-3 p-md-5' key={res.id}>
+            <div className='bg-light custom-style mb-5 p-3 p-md-5 w-10' key={res.id}>
               <div className='d-flex align-items-center flex-wrap'>
                 <img
                   className='rounded-circle me-3 mb-3 mb-md-0'
@@ -58,9 +57,9 @@ export default function Restaurants() {
               <div className='fs-5 my-4'>{res.overview}</div>
 
               <div className='d-flex flex-wrap justify-content-center'>
-                <img className='my-2 mx-3' style={{ maxWidth: '150px', height: 'auto' }} src={res.menu1} alt='menu 1' />
-                <img className='my-2 mx-3' style={{ maxWidth: '150px', height: 'auto' }} src={res.menu1} alt='menu 2' />
-                <img className='my-2 mx-3' style={{ maxWidth: '150px', height: 'auto' }} src={res.menu1} alt='menu 3' />
+                <img className='my-2 mx-3 rounded-3' style={{ maxWidth: '150px', height: 250 }} src={res.menu1} alt='menu 1' />
+                <img className='my-2 mx-3 rounded-3' style={{ maxWidth: '150px', height: 250 }} src={res.menu2} alt='menu 2' />
+                <img className='my-2 mx-3 rounded-3' style={{ maxWidth: '150px', height: 250 }} src={res.menu3} alt='menu 3' />
               </div>
 
               <div className='d-flex justify-content-center my-4'>
