@@ -62,10 +62,10 @@ export default function Navbar() {
                             <form className="d-flex" role="search">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             </form>
-                            <button className="nav-item btn btn-success rounded-3 mx-2" style={{width:80}}>
+                            <button className="nav-item btn btn-success rounded-3 mx-2" >
                                 <Link className="nav-link text-white" aria-current="page" to="signin">Sign in</Link>
                             </button>
-                            <button className="nav-item btn btn-success rounded-3 mx-2" style={{width:80}}>
+                            <button className="nav-item btn btn-success rounded-3 mx-2" >
                                 <Link className="nav-link text-white" to="signup">Sign up</Link>
                             </button>
                         </ul>
@@ -74,7 +74,7 @@ export default function Navbar() {
                             <form className="d-flex" role="search">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             </form>
-                            <button className="nav-item btn btn-success rounded-3 mx-2" style={{width:80}} onClick={() => {DeleteUserData()}}>
+                            <button className="nav-item btn btn-success rounded-3 mx-2"  onClick={() => {DeleteUserData()}}>
                                 Sign out
                             </button>
                         </ul>}

@@ -35,9 +35,7 @@ import Restaurants from './Components/Restaurants/allRestaurants';
 function App() {
   let routers = createBrowserRouter([
     {
-      path: '',
-      element: <Layout />,
-      children: [
+      path: '', element: <Layout />, children: [
         { index: true, element: <Home /> },
         { path: 'about', element: <About /> },
         { path: 'banks', element: <Banks /> },

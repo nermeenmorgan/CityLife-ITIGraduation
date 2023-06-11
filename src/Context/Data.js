@@ -84,5 +84,5 @@ const ExchangedData={userData,DeleteUserData,saveUserData,movies,ImgsArr,FastFoo
             {props.children}
         </DataContext.Provider>
     );
-    
 }
+
