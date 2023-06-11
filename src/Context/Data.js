@@ -39,7 +39,7 @@ export default function Data(props) {
     ];
 
     const [movies,setMovies] = useState([])
->>>>>>> 463d078cb651af21a94a7e0518887d58565c9bbd
+>>>>>>> zz
 
     useEffect(()=>{
        axios.get('http://localhost:3005/cinema')
