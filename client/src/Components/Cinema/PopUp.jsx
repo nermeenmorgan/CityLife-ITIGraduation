@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from "uuid";
+import Payment from '../PaymentStripe/Payment';
 
 
 export default function PopUp() {
@@ -90,9 +91,36 @@ export default function PopUp() {
                 </div>
               </div>
             </div>
+
             <div
               className="modal fade"
               id="exampleModalToggle2"
+              aria-hidden="true"
+              aria-labelledby="exampleModalToggleLabel2"
+              tabIndex="-1"
+            >
+              <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h1
+                      className="modal-title fs-5"
+                      id="exampleModalToggleLabel2"
+                    >
+                      Pay for your ticket (100 EGP)
+                    </h1>
+                  </div>
+                  <div className="modal-body d-flex flex-column align-items-center">
+                  <Payment></Payment>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            {/* <div
+              className="modal fade"
+              id="exampleModalToggle3"
               aria-hidden="true"
               aria-labelledby="exampleModalToggleLabel2"
               tabIndex="-1"
@@ -119,13 +147,12 @@ export default function PopUp() {
                       style={{ color: "#2aa509" }}
                     ></i>
                     <p className="fw-bold">
-                      {" "}
                       Your reservation code is {uuid().substring(0, 8)}{" "}
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
     </>
   )
 }

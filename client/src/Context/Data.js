@@ -5,6 +5,8 @@ import axios from 'axios';
 export const DataContext = createContext();
 
 export default function Data(props) {
+
+  // Images About Slider
     const ImgsArr = [
         "https://www.talaatmoustafa.com/Upload/75rehab%201.jpg",
         "https://www.talaatmoustafa.com/Upload/8rehab%202.jpg",
@@ -28,6 +30,7 @@ export default function Data(props) {
         "https://www.talaatmoustafa.com/Upload/0rehab%2022.jpg"
     ];
 
+    // Cinema movies Data Management
     const [movies,setMovies] = useState([])
 
     useEffect(()=>{
@@ -37,15 +40,23 @@ export default function Data(props) {
        })
     },[])
 
+    // Sign in and sign up token management
     const [userData, setUserData] = useState(null);
+    
     function saveUserData() {
         let encodedToken = localStorage.getItem("userToken");
         let decodedToken = jwtDecode(encodedToken);
         setUserData(decodedToken);
     }
+    useEffect(()=>{
+         if (localStorage.length !== 0){
+           saveUserData()
+         }
+    },[])
+    
     function DeleteUserData() {
         localStorage.removeItem("userToken")
-        window.location.reload();
+        setUserData(null)
     }
 
     // Restaurant Data Management

@@ -1,12 +1,14 @@
 import React from 'react'
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { DataContext } from '../../Context/Data'
 
 export default function Navbar() {
+    
+    const {userData, DeleteUserData} = useContext(DataContext)
+    const navigate = useNavigate()
 
-    const { userData } = useContext(DataContext)
-    const { DeleteUserData } = useContext(DataContext)
+// console.log(userData)
 
     return <>
         <nav className="navbar navbar-expand-lg bg-main-light">
@@ -74,11 +76,13 @@ export default function Navbar() {
                             <form className="d-flex" role="search">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             </form>
-                            <button className="nav-item btn btn-success rounded-3 mx-2"  onClick={() => {DeleteUserData()}}>
+                            <button className="nav-item btn btn-success rounded-3 mx-2"  onClick={() => {
+                                DeleteUserData()
+                                navigate("/")
+                                }}>
                                 Sign out
                             </button>
                         </ul>}
-
                 </div>
             </div>
         </nav>

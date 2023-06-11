@@ -30,6 +30,8 @@ import Pizza from './Components/Restaurants/pizza';
 import SignIn from './Components/SignIn/SignIn';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import Restaurants from './Components/Restaurants/allRestaurants';
+import Payment from './Components/PaymentStripe/Payment';
+import Completion from './Components/PaymentStripe/Completion';
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
     {
       path: '', element: <Layout />, children: [
         { index: true, element: <Home /> },
+        { path: 'stripe', element: <Payment /> },
+        { path: "completion", element: <Completion></Completion> },
         { path: 'about', element: <About /> },
         { path: 'banks', element: <Banks /> },
         { path: 'markets', element: <Markets /> },

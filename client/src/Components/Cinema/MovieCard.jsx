@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../../Context/Data';
 
 
 export default function MovieCard({movie}) {
+  const {userData}= useContext(DataContext)
+  // console.log(userData)
   return (
     <div
     className="col-lg-4 col-md-6 col-12 my-3 pe-3"
@@ -40,7 +43,7 @@ export default function MovieCard({movie}) {
       </ul>
       <div className="card-body text-center">
         <button
-          disabled={movie.soon ? true : false}
+          disabled={userData===null? true : ( movie.soon ? true: false)}
           className="btn btn-success w-50"
           data-bs-target="#exampleModalToggle"
           data-bs-toggle="modal"
