@@ -2,18 +2,9 @@ import React, { createContext, useEffect } from 'react';
 import { useState } from 'react';
 import jwtDecode from 'jwt-decode';
 import axios from 'axios';
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
->>>>>>> 463d078cb651af21a94a7e0518887d58565c9bbd
 
-
-<<<<<<< HEAD
-export default function Data({children}) {
-                                                 // Managing User Data
-    const [userData, setUserData] = useState(null);
-=======
 export const DataContext = createContext();
+
 export default function Data(props) {
     const ImgsArr = [
         "https://www.talaatmoustafa.com/Upload/75rehab%201.jpg",
@@ -38,65 +29,66 @@ export default function Data(props) {
         "https://www.talaatmoustafa.com/Upload/0rehab%2022.jpg"
     ];
 
-    const [movies,setMovies] = useState([])
->>>>>>> 463d078cb651af21a94a7e0518887d58565c9bbd
+    const [movies, setMovies] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:3005/cinema')
+            .then((res) => {
+                setMovies(res.data)
+            })
+    }, [])
 
-    useEffect(()=>{
-       axios.get('http://localhost:3005/cinema')
-       .then((res)=>{
-        setMovies(res.data)
-       })
-    },[])
     const [userData, setUserData] = useState(null);
     function saveUserData() {
         let encodedToken = localStorage.getItem("userToken");
         let decodedToken = jwtDecode(encodedToken);
         setUserData(decodedToken);
     }
-                                                // Restaurant Data Management
-    const[AllRestaurants,setAllRestaurants]= useState([]);
-    const[ShawarmaRes, setShawarmaRes] = useState ([]);
-    const[SeaFoodRes, setSeaFoodRes] = useState ([]);
-    const[OrientalFoodRes, setOrientalFoodRes] = useState ([]);
-    const[PizzaRes, setPizzaRes] = useState ([]);
-    const[FriedRes, setFriedRes] = useState ([]);
-    const[FastFoodRes, setFastFoodRes] = useState ([]);
-    useEffect(() => {
-      axios.get("http://localhost:3000/restaurant")
-        .then(res => {
-          setShawarmaRes(res.data.shawarma);
-          setSeaFoodRes(res.data.seafood);
-          setOrientalFoodRes(res.data.orientalfood);
-          setPizzaRes(res.data.pizza);
-          setFriedRes(res.data.fried);
-          setFastFoodRes(res.data.fastfood)
-        })
-        .catch(error => {
-          console.error('Error fetching restaurants:', error);
-        });
-    }, []);
-    
-    useEffect(() => {
-      setAllRestaurants([...ShawarmaRes, ...SeaFoodRes, ...OrientalFoodRes, ...PizzaRes, ...FriedRes]);
-    }, [ShawarmaRes, SeaFoodRes, OrientalFoodRes, PizzaRes, FriedRes]);
-    
 
-<<<<<<< HEAD
-const ExchangedData={FastFoodRes,userData, saveUserData,AllRestaurants,ShawarmaRes,SeaFoodRes, OrientalFoodRes, PizzaRes,  FriedRes }
-    return (
-        <DataContext.Provider value={ExchangedData}>
-            {children}
-=======
     function DeleteUserData() {
         localStorage.removeItem("userToken")
         window.location.reload();
     }
 
+    // Restaurant Data Management
+    const [AllRestaurants, setAllRestaurants] = useState([]);
+    const [ShawarmaRes, setShawarmaRes] = useState([]);
+    const [SeaFoodRes, setSeaFoodRes] = useState([]);
+    const [OrientalFoodRes, setOrientalFoodRes] = useState([]);
+    const [PizzaRes, setPizzaRes] = useState([]);
+    const [FriedRes, setFriedRes] = useState([]);
+    useEffect(() => {
+        axios.get("http://localhost:3000/restaurant")
+            .then(res => {
+                setShawarmaRes(res.data.shawarma);
+                setSeaFoodRes(res.data.seafood);
+                setOrientalFoodRes(res.data.orientalfood);
+                setPizzaRes(res.data.pizza);
+                setFriedRes(res.data.fried);
+                setAllRestaurants([...res.data.shawarma, ...res.data.seafood, ...res.data.orientalfood, ...res.data.pizza, ...res.data.fried]);
+            })
+            .catch(error => {
+                console.error('Error fetching restaurants:', error);
+            });
+    }, []);
+
+    const ExchangedData = {
+        userData,
+        saveUserData,
+        movies,
+        DeleteUserData,
+        ImgsArr,
+        AllRestaurants,
+        ShawarmaRes,
+        SeaFoodRes,
+        OrientalFoodRes,
+        PizzaRes,
+        FriedRes
+    }
+
     return (
-        <DataContext.Provider value={{ userData, saveUserData,movies,DeleteUserData,ImgsArr}}>
+        <DataContext.Provider value={ExchangedData}>
             {props.children}
->>>>>>> 463d078cb651af21a94a7e0518887d58565c9bbd
         </DataContext.Provider>
     );
-    
 }
+
