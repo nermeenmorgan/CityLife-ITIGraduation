@@ -1,0 +1,23 @@
+.custom-progress-bar .progress-bar {
+    background-color: green;
+    border-color: orange;
+    color: white;
+    
+  }
+  .custom-style {
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  
+  .custom-progress-bar .progress-bar::before {
+    background-color: yellow;
+  }
+  
+  .custom-progress-bar .progress-bar::after {
+    background-color: red;
+  }
+
+
+  
