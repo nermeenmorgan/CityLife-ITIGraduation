@@ -7,8 +7,8 @@ import ContactUs from './Components/ContactUs/ContactUs';
 import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
-import './App.css';
 import Resturants from './Components/Resturants/Resturants';
+import './App.css';
 
 function App() {
   let routers = createBrowserRouter([
