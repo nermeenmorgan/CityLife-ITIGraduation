@@ -1,0 +1,21 @@
+.test{
+    background-color: aqua;
+}
+
+.dFlex{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.font{
+color: rgb(185, 32, 32);
+
+}
+
+
+.img{
+    width: 50% 50%;
+        /* width: 10% !important; */
+}
