@@ -30,6 +30,8 @@ import Pizza from './Components/Restaurants/pizza';
 import SignIn from './Components/SignIn/SignIn';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import Restaurants from './Components/Restaurants/allRestaurants';
+import Schools from './Components/Education/schools';
+import Kindergarten from './Components/Education/kindergarten';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
         { path: 'markets', element: <Markets /> },
         { path: 'hospitals', element: <Hospitals /> },
         { path: 'education', element: <Education /> },
+        { path: 'education/kindergarten', element: <Kindergarten /> },
+        { path: 'education/schools', element: <Schools /> },
         { path: 'cinema', element: <Cinema /> },
         { path: 'payment', element: <ProtectedRoute><MaintenancePayment /></ProtectedRoute> },
         {

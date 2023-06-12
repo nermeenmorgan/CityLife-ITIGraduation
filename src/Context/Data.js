@@ -76,8 +76,45 @@ export default function Data(props) {
     }, [ShawarmaRes, SeaFoodRes, OrientalFoodRes, PizzaRes, FriedRes]);
     
 
+//Education Data Management
+const [AllEducation, setAllEducation] = useState([]);
+const [Schools, setSchools] = useState([]);
+const [Kindergarten, setKindergarten] = useState([]);
+useEffect(() => {
+    axios.get("http://localhost:3005/education")
+        .then(res => {
+        setSchools(res.data.schools);
+        setKindergarten(res.data.kindergarten);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}, []);
 
-const ExchangedData={userData,DeleteUserData,saveUserData,movies,ImgsArr,FastFoodRes,AllRestaurants,ShawarmaRes,SeaFoodRes,OrientalFoodRes,PizzaRes,FriedRes }
+useEffect(() => {
+setAllEducation([...Schools, ...Kindergarten]);
+}, [Schools, Kindergarten]);
+
+
+
+
+const ExchangedData={
+  userData,
+  DeleteUserData,
+  saveUserData,
+  movies,
+  ImgsArr,
+  FastFoodRes,
+  AllRestaurants,
+  ShawarmaRes,
+  SeaFoodRes,
+  OrientalFoodRes,
+  PizzaRes,
+  FriedRes,
+  Schools,
+  Kindergarten,
+  AllEducation,
+}
    
     return (
         <DataContext.Provider value={ExchangedData}>
